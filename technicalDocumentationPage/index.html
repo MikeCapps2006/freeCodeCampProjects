@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <title>Bootstrap 4 Documentation</title>
+</head>
+<body>
+    <div id='pageContainer'>
+        <nav id='navbar'>
+            <header class='textCenter'>
+                Bootstrap 4 Documentation
+            </header>
+            <ul id='nav-ul'>
+                <li><a class='nav-link' href='#introduction'>Introduction</a></li>
+                <li><a class='nav-link' href='#gettingStarted'>Getting Started</a></li>
+                <li><a class='nav-link' href='#layout'>Layout</a></li>
+                <li><a class='nav-link' href='#content'>Content</a></li>
+                <li><a class='nav-link' href='#components'>Components</a></li>
+                <li><a class='nav-link' href='#utilities'>Utilities</a></li>
+                <li><a class='nav-link' href='#extend'>Extend</a></li>
+                <li><a class='nav-link' href='#migration'>Migration</a></li>
+                <li><a class='nav-link' href='#about'>About</a></li>
+            </ul>
+        </nav>
+
+        <main id='main-doc'>
+            
+            <section id='introduction' class='main-section'>
+                <header>Introduction</header>
+                <article>
+                    <p>
+                        Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. 
+                        Quickly prototype your ideas or build your entire app with our Sass variables and mixins, 
+                        responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.
+                    </p>
+                </article>
+            </section>
+            
+            <section id='gettingStarted' class='main-section'>
+                <header>Getting Started</header>
+                <article>                    
+                    <p>
+                        *** In order to get everything set up just follow these steps... ***
+                    </p>
+                    <h2>CSS and JS</h2>
+                    <ol>
+                        <li>
+                            Copy-paste the stylesheet <code class='highlighted-red'>&lt;link&gt;</code> into your 
+                            <code class='highlighted-red'>&lt;head&gt;</code> before all other stylesheets to load our CSS.
+                            <div class='copyCode'>
+                                <code>
+                                    <span class='highlighted-navy'>&lt;link</span> <span class='highlighted-lightblue'>rel=</span><span class='highlighted-red'>"stylesheet"</span> <span class='highlighted-lightblue'>href=</span><span class='highlighted-red'>"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"</span> <span class='highlighted-lightblue'>integrity=</span><span class='highlighted-red'>"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"</span> <span class='highlighted-lightblue'>crossorigin=</span><span class='highlighted-red'>"anonymous"</span><span class='highlighted-navy'>&gt;</span>
+                                </code>
+                            </div>                            
+                        </li>
+                        <li>
+                            Many of our components require the use of JavaScript to function. Specifically, they require jQuery, Popper.js, and our own JavaScript plugins. Place the following <code class='highlighted-red'>&lt;script&gt;</code>s near the end of your pages, right before the closing <code class='highlighted-red'>&lt;/body&gt;</code> tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.
+                            <div class='copyCode'>
+                                <code>
+                                        <span class='highlighted-navy'>&lt;script</span> <span class='highlighted-lightblue'>src=</span><span class='highlighted-red'>"https://code.jquery.com/jquery-3.2.1.slim.min.js"</span> <span class='highlighted-lightblue'>integrity=</span><span class='highlighted-red'>"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"</span> <span class='highlighted-lightblue'>crossorigin=</span><span class='highlighted-red'>"anonymous"</span><span class='highlighted-navy'>&gt;&lt;/script&gt;</span>
+                                </code>
+                                <br>
+                                <code>
+                                        <span class='highlighted-navy'>&lt;script</span> <span class='highlighted-lightblue'>src=</span><span class='highlighted-red'>"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"</span> <span class='highlighted-lightblue'>integrity=</span><span class='highlighted-red'>"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"</span> <span class='highlighted-lightblue'>crossorigin=</span><span class='highlighted-red'>"anonymous"</span><span class='highlighted-navy'>&gt;&lt;/script&gt;</span>
+                                </code>
+                                <br>
+                                <code>
+                                        <span class='highlighted-navy'>&lt;script</span> <span class='highlighted-lightblue'>src=</span><span class='highlighted-red'>"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"</span> <span class='highlighted-lightblue'>integrity=</span><span class='highlighted-red'>"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"</span> <span class='highlighted-lightblue'>crossorigin=</span><span class='highlighted-red'>"anonymous"</span><span class='highlighted-navy'>&gt;&lt;/script&gt;</span>
+                                </code>
+                            </div>   
+                        </li>
+                    </ol>
+                    <p>
+                        ***That’s all you need for overall page requirements.***
+                    </p>                    
+                </article>
+            </section>
+
+            <section id='layout' class='main-section'>
+                <header>Layout</header>
+                <article>
+                    <p>
+                        <strong>Containers</strong> are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+                    </p>
+                    <p>
+                        While containers can be nested, most layouts do not require a nested container.
+                    </p>
+                    <p>
+                        Simply add the class of 'container' or 'container-fluid' to a div element and you are set.
+                    </p>
+
+                    <div id ='container' class='copyCode'>
+                        <code>
+                            <span class='highlighted-navy'>&lt;div</span> <span class='highlighted-lightblue'>class=</span><span class='highlighted-red'>"container"</span>&gt;
+                            <br>
+                            &nbsp;&nbsp;&nbsp;<span class='highlighted-grey'>&lt;!-- Content here --&gt;</span>
+                            <br>
+                            <span class='highlighted-navy'>&lt;/div&gt;</span>                            
+                        </code>
+                    </div>
+                </article>
+            </section>
+
+            <section id='content' class='main-section'>
+                <header>Content</header>
+                <article>
+                    <h2>Reboot</h2>
+                    <p>
+                        Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
+                    </p>
+                    <h3>Approach</h3>
+                    <p>
+                        Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some <code><span class='highlighted-red'>&lt;table&gt;</span></code> styles for a simpler baseline and later provide <span class='highlighted-red'>.table</span>, <span class='highlighted-red'>.table-bordered</span>, and more.
+                    </p>
+                    <p>
+                        Here are our guidelines and reasons for choosing what to override in Reboot:
+                    </p>
+                    <ul class='normalUl'>
+                        <li>
+                            Update some browser default values to use <code><span class='highlighted-red'>rem</span></code>s instead of <code><span class='highlighted-red'>em</span></code>s for scalable component spacing.
+                        </li>
+                        <li>
+                            Avoid <code><span class='highlighted-red'>margin-top</span></code>. Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of <code><span class='highlighted-red'>margin</span></code> is a simpler mental model.
+                        </li>
+                        <li>
+                            For easier scaling across device sizes, block elements should use <code><span class='highlighted-red'>rem</span></code>s for <code><span class='highlighted-red'>margin</span></code>s.
+                        </li>
+                        <li>
+                            Keep declarations of font-related properties to a minimum, using <code><span class='highlighted-red'>inherit</span></code> whenever possible.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id='components' class='main-section'>
+                <header>Components</header>
+                <article>
+                    <p>
+                        There is an array of different components built into Bootstrap. Visit <a href='https://getbootstrap.com/docs/4.0/components/alerts/' >this page</a>  to find out more about components and usage of them.
+                    </p>
+                    <ul class='normalUl'>
+                        <li>Alerts</li>
+                        <li>Badge</li>
+                        <li>Breadcrumb</li>
+                        <li>Buttons</li>
+                        <li>Button group</li>
+                        <li>Card</li>
+                        <li>Carousel</li>
+                        <li>Collapse</li>
+                        <li>Dropdowns</li>
+                        <li>Forms</li>
+                        <li>Input group</li>
+                        <li>Jumbotron</li>
+                        <li>List group</li>
+                        <li>Modal</li>
+                        <li>Navs</li>
+                        <li>Navbar</li>
+                        <li>Pagination</li>
+                        <li>Popovers</li>
+                        <li>Progress</li>
+                        <li>Scrollspy</li>
+                        <li>Tooltips</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id='utilities' class='main-section'>
+                <header>Utilities</header>
+                <article>
+                    <p>
+                        There are a lot of utilities that you can use in Bootstrap to help achieve your goals for a project. Visit <a href='https://getbootstrap.com/docs/4.0/utilities/borders/' >this page</a>  to find out more about different Utilities and usage of them.
+                    </p>
+                    <ul class='normalUl'>
+                        <li>Borders</li>
+                        <li>Clearfix</li>
+                        <li>Close icon</li>
+                        <li>Colors</li>
+                        <li>Display</li>
+                        <li>Embed</li>
+                        <li>Flex</li>
+                        <li>Float</li>
+                        <li>Image replacement</li>
+                        <li>Position</li>
+                        <li>Screenreaders</li>
+                        <li>Sizing</li>
+                        <li>Spacing</li>
+                        <li>Text</li>
+                        <li>Vertical align</li>
+                        <li>Visibility</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id='extend' class='main-section'>
+                <header>Extend</header>
+                <article>
+                    <h2>Approach</h2>
+                    <p>
+                        Learn about the guiding principles, strategies, and techniques used to build and maintain Bootstrap so you can more easily customize and extend it yourself.
+                    </p>
+                    <p>
+                        While the getting started pages provide an introductory tour of the project and what it offers, this document focuses on <em>why</em> we do the things we do in Bootstrap. It explains our philosophy to building on the web so that others can learn from us, contribute with us, and help us improve.
+                    </p>
+                    <h3>Summary</h3>
+                    <p>
+                        We’ll dive into each of these more throughout, but at a high level, here’s what guides our approach.
+                    </p>
+                    <ul class='normalUl'>
+                        <li>Components should be responsive and mobile-first</li>
+                        <li>Components should be built with a base class and extended via modifier classes</li>
+                        <li>Component states should obey a common z-index scale</li>
+                        <li>Whenever possible, prefer HTML and CSS implementations over JavaScript</li>
+                        <li>Whenever possible, use utilites over custom styles</li>
+                        <li>Whenever possible, avoid enforcing strict HTML requirements (children selectors)</li>
+                    </ul>
+                    <h3>Responsive</h3>
+                    <p>Bootstrap’s responsive styles are built to be responsive, an approach that’s often referred to as mobile-first. We use this term in our docs and largely agree with it, but at times it can be too broad. While not every component must be entirely responsive in Bootstrap, this responsive approach is about reducing CSS overrides by pushing you to add styles as the viewport becomes larger.</p>
+
+                    <p>Across Bootstrap, you’ll see this most clearly in our media queries. In most cases, we use min-width queries that begin to apply at a specific breakpoint and carry up through the higher breakpoints. For example, a .d-none applies from min-width: 0 to   infinity. On the other hand, a .d-md-none applies from the medium breakpoint and up.</p>
+
+                    <p>At times we’ll use max-width when a component’s inherent complexity requires it. At times, these overrides are functionally and mentally clearer to implement and support than rewriting core functionality from our components. We strive to limit this approach, but will use it from time to time.</p>
+
+                    <h3>Classes</h3>
+                    <p>Aside from our Reboot, a cross-browser normalization stylesheet, all our styles aim to use classes as selectors. This means steering clear of type selectors (e.g., input[type="text"]) and extraneous parent classes (e.g., .parent .child) that make styles too specific to easily override.</p>
+
+                    <p>As such, components should be built with a base class that houses common, not-to-be overridden property-value pairs. For example, .btn and .btn-primary. We use .btn for all the common styles like display, padding, and border-width. We then use modifiers like .btn-primary to add the color,   background-color, border-color, etc.</p>
+
+                    <p>Modifier classes should only be used when there are multiple properties or values to be changed across multiple variants. Modifiers are not always necessary, so be sure you’re actually saving lines of code and preventing unnecessary overrides when creating them. Good examples of modifiers are our theme color classes and size variants.</p>
+
+                    <h3>z-index scales</h3>
+                    <p>There are two z-index scales in Bootstrap—elements within a component and overlay components.</p>
+                    <h4>Component elements</h4>
+                    <ul class='normalUl'>
+                        <li>
+                            Some components in Bootstrap are built with overlapping elements to prevent double borders without modifying the border property. For example, button groups, input groups, and pagination.
+                        </li>
+                        <li>
+                            These components share a standard z-index scale of 0 through 3. 
+                        </li>
+                        <li>
+                            0 is default (initial), 1 is :hover, 2 is :active/.active, and , 3 is :focus.
+                        </li>
+                        <li>
+                            This approach matches our expectations of highest user priority. If an element is focused, it’s in view and at the user’s attention. Active elements are second highest because they indicate state. Hover is third highest because it indicates user intent, but nearly anything can be hovered. 
+                        </li>
+                    </ul>
+                    <h4>Overlay components</h4>
+                    <p>Bootstrap includes several components that function as an overlay of some kind. This includes, in order of highest z-index, dropdowns, fixed and sticky navbars, modals, tooltips, and popovers. These components have their own z-index scale that begins at 1000. This starting number is random and serves as a small buffer between our styles and your project’s custom styles.</p>
+
+                    <p>Each overlay component increases it’s z-index value slightly in such a way that common UI principles allow user focused or hovered elements to remain in view at all times. For example, a modal is document blocking (e.g., you cannot take any other action save for the modal’s action), so we put that above our navbars.</p>
+
+                    <h3>HTML and CSS over JS</h3>
+                    <p>Whenever possible, we prefer to write HTML and CSS over JavaScript. In general, HTML and CSS are more prolific and accessible to more people of all different experience levels. HTML and CSS are also faster in your browser than JavaScript, and your browser general provides a great deal of functionality for you.</p>
+
+                    <p>This principle is our first-class JavaScript API is data attributes. You don’t need to write nearly any JavaScript to use our JavaScript plugins; instead, write HTML.</p>
+
+                    <p>Lastly, our styles build on the fundamental behaviors of common web elements. Whenever possible, we prefer to use what the browser provides. For example, you can put a .btn class on nearly any element, but most elements don’t provide any semantic value or browser functionality. So instead, we use <code>&lt;button&gt;</code>s and <code>&lt;a&gt;</code></p>
+
+                    <p>The same goes for more complex components. While we could write our own form validation plugin to add classes to a parent element based on an input’s state, thereby allowing us to style the text say red, we prefer using the <code>:valid/:invalid</code> pseudo-elements every browser provides us.</p>
+                    
+                    <h3>Utilities</h3>
+                    <p>Utility classes—formerly helpers in Bootstrap 3—are a powerful ally in combatting CSS bloat and poor page performance. A utility class is typically a single, immutable property-value pairing expressed as a class (e.g., .d-block represents display: block;). Their primary appeal is speed of use while writing HTML and limiting the amount of custom CSS you have to write.</p>
+
+                    <p>Specifically regarding custom CSS, utilities can help combat increasing file size by reducing your most commonly repeated property-value pairs into single classes. This can have a dramatic effect at scale in your projects.</p>
+
+                    <h3>Flexible HTML</h3>
+                    <p>While not always possible, we strive to avoid being overly dogmatic in our HTML requirements for components. Thus, we focus on single classes in our CSS selectors and try to avoid immediate children selectors (~). This gives you more flexibility in your implementation and helps keep our CSS simpler and less specific.</p>
+                </article>
+            </section>
+
+            <section id='migration' class='main-section'>
+                <header>Migration</header>
+                <article>
+                    <p>
+                        Bootstrap 4 is a major rewrite of the entire project. The most notable changes are summarized below, followed by more specific changes to relevant components.
+                    </p>
+                </article>
+            </section>
+
+            <section id='about' class='main-section'>
+                <header>About</header>
+                <article>
+                    <h3>About</h3>
+                    <p>
+                        Learn more about the team maintaining Bootstrap, how and why the project started, and how to get involved.
+                    </p>
+                    <h3>Team</h3>
+                    <p>
+                        Bootstrap is maintained by a small team of developers on GitHub. We’re actively looking to grow this team and would love to hear from you if you’re excited about CSS at scale, writing and maintaining vanilla JavaScript plugins, and improving build tooling processes for frontend code.
+                    </p>
+                    <h3>History</h3>
+                    <p>Originally created by a designer and a developer at Twitter, Bootstrap has become one of the most popular front-end frameworks and open source projects in the world.</p>
+
+                    <p>Bootstrap was created at Twitter in mid-2010 by @mdo and @fat. Prior to being an open-sourced framework, Bootstrap was known as Twitter Blueprint. A few months into development, Twitter held its first Hack Week and the project exploded as developers of all skill levels jumped in without any external guidance. It served as the style guide for internal tools development at the company for over a year before its public release, and continues to do so today.</p>
+
+                    <p>Originally released on August 19, 2011, we’ve since had over twenty releases, including two major rewrites with v2 and v3. With Bootstrap 2, we added responsive functionality to the entire framework as an optional stylesheet. Building on that with Bootstrap 3, we rewrote the library once more to make it responsive by default with a mobile first approach.</p>
+
+                    <p>With Bootstrap 4, we once again rewrote the project to account for two key architectural changes: a migration to Sass and the move to CSS’s flexbox. Our intention is to help in a small way to move the web development community forward by pushing for newer CSS properties, fewer dependencies, and new technologies across more modern browsers.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+    <footer id='footer' class='textCenter'>
+        <p>&copy;2018</p>
+        <p>Written and Coded by <a href='https://codepen.io/mcapps/' target="_blank">Mike Capps</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.highlighted-red {
+    color: red;
+}
+
+.highlighted-lightblue {
+    color: lightblue;
+}
+
+.highlighted-navy {
+    color: navy;
+}
+
+.highlighted-grey {
+    color: grey;
+}
+
+#nav-ul {
+    list-style: none;
+    padding: 0;
+    border: 2px solid black;
+    height: 207.35px;
+    overflow-y: scroll;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#navbar header {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#navbar ul li {
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+#navbar ul li a {
+    color: black;
+}
+
+#main-doc header {
+    font-size: 25px;
+    margin: 20px;
+}
+
+article {
+    width: 85%;
+    margin: 0 auto;
+    word-spacing: .1em;
+}
+
+.copyCode {
+    background-color: #F7F7F9;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 100%;
+    min-height: 40px;
+    padding: 20px 30px 20px 30px;
+    margin: 10px;
+}
+
+
+#gettingStarted li {
+    padding: 5px 0 5px 5px;
+    margin: 5px 0;
+}
+
+#container {
+    overflow: hidden;
+}
+
+.normalUl li {
+    padding: 5px 0 5px 5px;
+    margin: 5px 0;
+}
+
+#footer {
+    width: 100%;
+    clear: both;
+    padding: 15px;
+}
+
+
+@media (min-width: 814px){
+    #navbar {
+        width: 25%;
+        float: left;
+    }
+
+    #main-doc {
+        width: 75%;
+        float: right;
+    }
+
+
+    #nav-ul {
+        height: 100%;
+        overflow-y: hidden;
+    }
+
+}

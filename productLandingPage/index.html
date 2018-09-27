@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Development</title>
+	<link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+</head>
+<body>
+	<div class='page-container'>
+
+
+		<header id='header'>
+			<nav id='nav-bar'>
+					<img id='header-img' src="assets/images/logo.png">
+					<h1 id='title'>Web Development</h1>
+					<ul id='rightSideUL'>
+						<li class='nav-link'><a href='#htmlCss'>HTML/CSS</a></li>
+						<li class='nav-link'><a href='#javascript'>JavaScript</a></li>
+						<li class='nav-link'><a href='#frameworks'>Frameworks</a></li>
+					</ul>
+			</nav>
+		</header>
+
+
+		<main>
+
+			<section id='signUp' class='textCenter'>
+				<h2>Sign up for special discount codes and free offers!!!</h2>
+				<form id='form' action='https://www.freecodecamp.com/email-submit'>
+					<input id='email' type="email" name="email" placeholder="Enter your email address" required />
+					<br>
+					<input id='submit' type="submit" value='Sign Up' class="btn">
+				</form>
+			</section>
+
+			<section id='htmlCss' class='textCenter'>
+				<h2>HTML/CSS</h2>
+				<div class='responsive'>
+					<iframe id='video' width="560" height="315" src="https://www.youtube.com/embed/y3UH2gAhwPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</section>
+
+			<section id='javascript' class='textCenter'>
+				<h2>JavaScript</h2>
+				<div class='responsive'>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/W6NZfCO5SIk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</section>
+
+			<section id='frameworks' class='textCenter'>
+				<h2>Frameworks</h2>
+				<div id='frameworkImgs'>
+					<a href='https://angularjs.org/'><img class='framework' src="assets/images/angular.png"></a>
+					<a href='https://reactjs.org/'><img class='framework' src="assets/images/react.png"></a>
+					<a href='https://vuejs.org/'><img class='framework' src="assets/images/vue.png"></a>
+				</div>
+			</section>
+
+		</main>
+
+		<footer id='footer' class='textCenter'>
+			<p>&copy;2018</p>
+			<p>Written and Coded by <a href='#'>Mike Capps</a></p>
+		</footer>
+
+
+	</div>
+</body>
+</html>

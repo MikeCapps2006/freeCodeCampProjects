@@ -1,0 +1,183 @@
+html {
+	width: 100%;
+}
+
+main {
+	overflow-y: auto;
+}
+
+#header-img {
+	height: 70px;
+	width: 70px;
+	margin-top: 10px;
+}
+
+#nav-bar {
+	background-color: white;
+	padding: 0;
+	display: flex;
+	align-items: top;
+	margin-top: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 17px;
+}
+
+#rightSideUL {
+	display: flex;
+	justify-content: right;
+	padding: 0;
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#title {
+	margin-right: auto;
+}
+
+.page-container {
+	margin: 0;
+	margin-top: 100px;
+}
+
+#javascript {
+	background-color: lightgrey;
+	width: 100%;
+	height: 400px;
+	margin: 20px 0;
+}
+
+#frameworkImgs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 20px;
+}
+
+.framework {
+	height: 200px;
+	width: 200px;
+}
+
+#footer {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	height: 80px;
+	width: 100%;
+	background-color: lightgrey;
+	color: #1A98D8;
+	padding: 15px;
+}
+
+.nav-link {
+	padding: 15px;
+	margin: 15px;
+}
+
+.nav-link a {
+	font-size: 1.3em;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+
+.nav-link a:hover {
+	color: #1A98D8;
+}
+
+.textCenter {
+	text-align: center;
+}
+
+.btn {
+	border-radius: 10px;
+	background-color: #1A98D8;
+	padding: 5px;
+	font-weight: bold;
+	margin: 20px;
+	height: 35px;
+	width: 115px;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px;
+}
+
+iframe {
+	max-width: 560px;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+
+
+input[type='email'] {
+	padding: 5px;
+	max-width: 275px;
+	width: 100%;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+section h2 {
+	padding-top: 15px;
+	color: #1A98D8;
+}
+
+@media only screen and (max-width: 850px) {
+    #rightSideUL {
+        flex-direction: column;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .nav-link {
+    	padding: 5px;
+    	margin: 0;
+    }
+
+    .nav-link a {
+		font-size: 1.1em;
+	}
+}
+
+@media only screen and (max-width: 482px) {
+    #nav-bar { 
+    	flex-wrap: wrap;
+    	justify-content: center;
+    }
+
+    .page-container {
+    	margin-top: 160px;
+    }
+
+    #title {
+    	margin-right: 0;
+    	margin-bottom: 0;
+    	margin-top: 20px;
+    }
+
+    #header-img {
+    	margin-top: 0;
+    }
+
+    #signUp h2 {
+    	margin-top: 0;
+    }
+
+}
+
