@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mike's Local Weather App</title>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+	<div class='container text-center'>
+		<h1>Local Weather<span class='location'></span></h1>
+        <canvas id="animated-icon" width="220" height="220"></canvas>
+        
+        <div class='row'>
+        	<div class='col'>
+        		<span class='time'>--:--</span>
+        
+       		</div><!-- time div -->
+            <div class='col temp'>
+        		<span class='temp-celsius' title='Click to toggle Celsius and Fahrenheit'>&deg;C</span>
+                <span class='temp-fahrenheit hidden'>&deg;F</span>
+        
+       		</div><!-- temp div -->
+            <div class='col'>
+        		<span class='weatherConditions'>Weather Conditions Unavailable</span>
+        
+       		</div><!-- weatherConditions div -->            
+        </div><!-- info row -->
+        
+        <div class='row'>
+        	<div class='col'>        		
+                <div id='searchBox'>
+                	<h3>Find a Forecast</h3>
+                    <form id="searchForm" action="">
+						<input type="text" placeholder="Search by Zip Code" id='zipCode'>
+						<button type='submit' class="btn-search">Search</button>
+					</form>
+                </div><!-- searchBox div -->
+            </div>        
+        </div><!-- searchBox row -->
+        <div class='row'>
+        	<div class='col'>
+                <div class='footer'>
+                    <p>Coded by <a href='http://codepen.io/mcapps/'>Mike Capps</a></p>
+                </div><!-- footer div -->
+            </div>
+        </div><!-- footer row div -->
+    </div> <!-- container div -->
+    
+
+
+
+    <script src='https://darkskyapp.github.io/skycons/skycons.js'></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src='script.js'></script>
+    
+</body>
+</html>
